@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --main-btn-color: hsl(233, 67%, 56%);
+  --secondary-btn-color: hsl(248, 70%, 36%);
+  --svg-color: hsl(28, 100%, 52%);
+
+  --main-bg-color: hsl(243, 96%, 9%);
+  --main-bg-2: hsl(243, 27%, 20%);
+  --main-bg-3: hsl(243, 23%, 24%);
+  --main-bg-4: hsl(243, 23%, 30%);
+  --main-bg-5: hsl(240, 6%, 70%);
+  --main-bg-6: hsl(250, 6%, 84%);
+  --main-bg-7: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-size: 18px;
+}
