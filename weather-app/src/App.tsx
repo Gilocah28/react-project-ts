@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { HeaderComponent } from "./components/header/HeaderComponent";
 
 const App = () => {
   const [weatherData, setWeatherData] = useState<any>(null);
-
   const dataKey: string = import.meta.env.VITE_WEATHER_KEY;
 
   const getWeatherData = async () => {
@@ -16,10 +16,14 @@ const App = () => {
   useEffect(() => {
     getWeatherData();
   }, []);
-  
+
   console.log(weatherData ? weatherData.location.name : "no data");
 
-  return <div>App</div>;
+  return (
+    <div className="app">
+      <HeaderComponent />
+    </div>
+  );
 };
 
 export default App;

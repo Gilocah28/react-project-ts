@@ -30,4 +30,6 @@ body {
   background-color: var(--main-bg-color);
   font-size: 18px;
   color: var(--main-bg-7);
+  max-width: 1440px;
+  height: 100vh;
 }
