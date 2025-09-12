@@ -17,7 +17,7 @@ const App = () => {
     getWeatherData();
   }, []);
 
-  console.log(weatherData ? weatherData.location.name : "no data");
+
 
   return (
     <div className="app">

@@ -19,13 +19,16 @@
   align-items: center;
   cursor: pointer;
   transition: all 350ms ease-in-out;
+  outline: none;
+  border: none;
 }
 
 .dropdown:hover,
-.dropdown:active {
+.dropdown:focus {
   background-color: var(--main-bg-5);
 }
 
 .dropdown img {
   width: 12px;
+  position: relative;
 }
