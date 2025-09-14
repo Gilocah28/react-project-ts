@@ -20,7 +20,7 @@ export const HeaderComponent = () => {
         <p>Units</p>
         <img src={dropDonwIcon} alt="dropdown-icon" />
       </button>
-      {isShow && <DropDownComponent isShow={isShow} />}
+      {isShow && <DropDownComponent />}
     </div>
   );
 };

@@ -1,10 +1,24 @@
+import { CheckedComponent } from "./CheckedComponent";
+
 type propsAttribute = {
   name: string;
   labelTitle: string;
   value: string;
+  tempValue: string;
+  windValue: string;
+  precipValue: string;
+  handleRadioValue: (value: string) => void;
 };
 
-export const RadioComponent = ({ name, labelTitle, value }: propsAttribute) => {
+export const RadioComponent = ({
+  name,
+  labelTitle,
+  value,
+  tempValue,
+  windValue,
+  precipValue,
+  handleRadioValue,
+}: propsAttribute) => {
   return (
     <>
       <label htmlFor={labelTitle}> {labelTitle}</label>
@@ -13,8 +27,15 @@ export const RadioComponent = ({ name, labelTitle, value }: propsAttribute) => {
         name={name}
         id={labelTitle}
         value={value}
-        onChange={() => {}}
+        onChange={() => handleRadioValue(value)}
+        checked={
+          value === tempValue || value === windValue || value === precipValue
+        }
       />
+
+      {(value === tempValue && <CheckedComponent />) ||
+        (value === windValue && <CheckedComponent />) ||
+        (value === precipValue && <CheckedComponent />)}
     </>
   );
 };
